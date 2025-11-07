@@ -1,39 +1,23 @@
-// bank_account.dart
 abstract class BankAccount {
   final int _accountNumber;
   String _accountHolderName;
-  double _balance;
+  double balance; // make it public for children
 
   BankAccount({
     required int accountNumber,
     required String accountHolderName,
-    required double balance,
+    required this.balance,
   }) : _accountNumber = accountNumber,
-       _accountHolderName = accountHolderName,
-       _balance = balance;
+       _accountHolderName = accountHolderName;
 
-  // Getters
   int get accountNumber => _accountNumber;
-  double get balance => _balance;
 
-  // Setters (with validation)
-  set accountHolderName(String name) => _accountHolderName = name;
-
-  set balance(double value) {
-    if (value < 0) {
-      throw Exception('Balance cannot be negative');
-    }
-    _balance = value;
-  }
-
-  // Abstract methods
   void deposit(double amount);
   void withdraw(double amount);
 
-  // Concrete method
   void displayInfo() {
     print('Account Number: $_accountNumber');
     print('Account Holder: $_accountHolderName');
-    print('Balance: $_balance');
+    print('Balance: $balance');
   }
 }
