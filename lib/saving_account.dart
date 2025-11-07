@@ -7,14 +7,10 @@ class SavingAccount extends BankAccount implements InterestBearing {
   static const int withdrawalLimit = 3;
 
   SavingAccount({
-    required int accountNumber,
-    required String accountHolderName,
-    required double balance,
-  }) : super(
-         accountNumber: accountNumber,
-         accountHolderName: accountHolderName,
-         balance: balance,
-       ) {
+    required super.accountNumber,
+    required super.accountHolderName,
+    required super.balance,
+  }) {
     if (balance < minBalance) {
       throw Exception("Intial Balance must be at least \$500");
     }
