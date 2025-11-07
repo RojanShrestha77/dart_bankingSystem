@@ -10,6 +10,11 @@ abstract class BankAccount {
   String get getaccountHolderName => _accountHolderName;
   double get getbalance => _balance;
 
-  double deposit();
-  double withdraw();
+  void deposit(double amount);
+  void withdraw(double amount);
+  void displayinfo() {
+    print("Account Number: $_accountNumber");
+    print("Account Holder: $_accountHolderName");
+    print("Account Balance: $_balance");
+  }
 }
