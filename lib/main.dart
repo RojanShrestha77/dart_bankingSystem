@@ -13,7 +13,7 @@ void main() {
   );
   var checking = CheckingAccount(
     accountNumber: 102,
-    accountHolderName: "Bob",
+    accountHolderName: "Rojan",
     balance: 500,
   );
   var premium = PremiumAccount(
