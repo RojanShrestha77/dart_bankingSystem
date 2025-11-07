@@ -1,6 +1,6 @@
 // bank_account.dart
 abstract class BankAccount {
-  int _accountNumber;
+  final int _accountNumber;
   String _accountHolderName;
   double _balance;
 
@@ -14,7 +14,6 @@ abstract class BankAccount {
 
   // Getters
   int get accountNumber => _accountNumber;
-  String get accountHolderName => _accountHolderName;
   double get balance => _balance;
 
   // Setters (with validation)
